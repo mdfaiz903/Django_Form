@@ -1,0 +1,24 @@
+body{
+    background-color: cyan;
+}
+#frm{
+    margin-left: 50px;
+    border: solid red 2px;
+}
+label{
+    color:rgb(206, 208, 40);
+    font-size:20;
+    font-weight:900;
+}
+input{
+    background-color: seagreen;
+}
+#id_texarea{
+    background-color: seagreen;
+}
+.errorlist{
+    list-style-type: none;
+    color:red;
+    font-size: 15px;
+    
+}

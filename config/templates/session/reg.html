@@ -1,0 +1,16 @@
+<h1>Hi</h1>
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+    {% for frm in form %}
+    {{frm.label_tag}} 
+    {{frm}}
+    {{frm.errors|striptags}}
+    <br>
+    <br>
+    <br>
+    
+    {% endfor %}
+    <button type="submit">Submit</button>
+    <p>If you have Account</p>
+    <button type="submit"><a href="{% url 'login_form' %}">Login</a></button>
+</form>

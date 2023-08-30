@@ -1,0 +1,19 @@
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+<!-- for step by step errors & validation check start(it's generic code) -->
+
+    {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+        <p>{{error}}</p>
+    {% endfor %}
+    {% endif %}
+    <!-- for step by step errors & validation check End -->
+
+    {% for frm in form %}
+        {{frm.label_tag}}
+        {{frm}}
+        {{frm.errors|striptags}}<br>
+    {% endfor %}
+    <button type="submit">Submit</button>
+    <a href="{% url 'login_form' %}">logout</a>
+</form>
